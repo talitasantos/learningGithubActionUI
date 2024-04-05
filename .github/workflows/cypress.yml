@@ -8,12 +8,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - run: npm i
+      - name: 'Run Cypress tests'
+        run: npx cypress run
         if: failure()
         with:
           name: cypress-snapshots
           path: cypress/snapshots
-      - run: npm i
-      - name: 'Run Cypress tests'
-        run: npx cypress run
       # - store_artifacts:
       #   path: cypress\screenshots
