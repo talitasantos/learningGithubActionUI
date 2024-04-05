@@ -1,4 +1,4 @@
-name: Checkout
+name: Cypress Tests UI Run on Pipeline
 
 on: [push]
 
@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - run: npm i
+      - name: 'Run Cypress tests'
+        run: npx cypress run
+      # - store_artifacts:
+      #   path: cypress\screenshots
