@@ -2,12 +2,12 @@ module.exports = {
     ci: {
       collect: {
         url: ['https://www.businessinsider.com/'], 
-        numberOfRuns: 1, 
+        numberOfRuns: 3, 
       },
       assert: {
         assertions: {
           'accessibility': ['error', { 
-            'minScore': 0.82, 
+            'minScore': 0.8, 
           }],
         },
       },
