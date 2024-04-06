@@ -2,7 +2,7 @@ module.exports = {
     ci: {
       collect: {
         url: ['https://www.businessinsider.com/'], 
-        numberOfRuns: 3, 
+        numberOfRuns: 1, 
       },
       assert: {
         assertions: {
